@@ -63,4 +63,10 @@ class Student
     sql = "SELECT * FROM students WHERE grade < 12"
     DB[:conn].execute(sql).map {|row|self.new_from_db(row)}
   end
+  
+  def self.first_X_students_in_grade_10
+  end 
+  
+  def self.all_students_in_grade_X
+  end
 end
