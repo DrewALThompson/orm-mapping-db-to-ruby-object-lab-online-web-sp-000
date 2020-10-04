@@ -58,4 +58,6 @@ class Student
     sql = "SELECT COUNT(grade = 9) FROM STUDENTS"
     DB[:conn].execute(sql)
   end
+  
+  def 
 end
