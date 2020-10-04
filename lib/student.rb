@@ -13,10 +13,9 @@ class Student
     sql = <<-SQL
       SELECT * 
       FROM students
-      WHERE grade = ?
     SQL
     
-    DB[:conn].execute(sql, grade)
+    DB[:conn].execute(sql, grade).map {|row|
   end
 
   def self.find_by_name(name)
