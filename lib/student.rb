@@ -60,8 +60,10 @@ class Student
   end
   
   def self.students_below_12th_grade
-    sql = "SELECT COUNT(grade > 12) FROM students"
+    sql = <<-SQL
+      SELECT * FROM students
+      WHERE students.grade > 12
+    SQL
     DB[:conn].execute(sql)
-    binding.pry
   end
 end
