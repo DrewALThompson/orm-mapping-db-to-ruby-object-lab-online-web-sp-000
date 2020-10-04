@@ -13,6 +13,7 @@ class Student
     sql = <<-SQL
       SELECT * 
       FROM students
+      WHERE grade = ?
     SQL
     
     DB[:conn].execute(sql, grade).map {|row|self.new_from_db(row)}
